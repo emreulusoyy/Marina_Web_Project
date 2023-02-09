@@ -1,0 +1,18 @@
+﻿@using EntityLayer.Concrete
+@model List<Misyonumuz>
+<div class="col-md-6" style="margin-bottom: 30px;">
+    <div class="h-100 p-5 bg-light border rounded-3">
+        @foreach(var x in Model)
+        {
+            
+        
+        <h3 key="12">@x.Title</h3>
+        <p key="10">
+           @x.Description
+        </p>
+        <button key="13" class="btn btn-outline-secondary" type="button">Görüntüle</button>
+        }
+    </div>
+
+</div>
+

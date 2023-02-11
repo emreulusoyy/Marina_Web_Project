@@ -11,9 +11,11 @@ namespace EntityLayer.Concrete
     {
         [Key]
         public int IletisimID { get; set; }
-        public string TelefonNo { get; set; }
+        public string OfisNo { get; set; }
+        public string GsmNo { get; set; }
         public string Email { get; set; }
-        public string Adres { get; set; }
+        public string IlAdres { get; set; }
+        public string AcıkAdres { get; set; }
         public string Instagram { get; set; }
         public string Facebook { get; set; }
 

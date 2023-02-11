@@ -1,0 +1,46 @@
+﻿@using EntityLayer.Concrete
+@model List<Hizmetler>
+@{
+    ViewData["Title"] = "Index";
+    Layout = "~/Areas/Admin/Views/_AdminLayout.cshtml";
+}
+
+<div id="page-wrapper">
+    <div class="main-page">
+        <div class="tables">
+            <div class="panel-body widget-shadow">
+
+
+
+                <h4>Hizmetler Sayfası</h4>
+                <table class="table">
+                    <thead>
+
+                        <tr>
+                            <th>#</th>
+                            <th>Hizmetler</th>
+                            <th>Açıklama</th>
+                            <th>Güncelle</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        @foreach (var x in Model)
+                        {
+                            <tr>
+                                <th scope="row">@x.HizmetlerID</th>
+                                <td>@x.HizmetlerBaslik</td>
+                                <td>@x.HizmetlerAcıklama</td>
+                                <td><a href="/Hizmetler/HizmetlerDuzenle/@x.HizmetlerID" class="btn btn-success">Güncelle</a> </td>
+                            </tr>
+                        }
+                    </tbody>
+
+
+                </table>
+
+            </div>
+        </div>
+    </div>
+</div>
+
+

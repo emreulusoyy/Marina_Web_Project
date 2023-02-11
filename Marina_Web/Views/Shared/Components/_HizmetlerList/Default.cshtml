@@ -1,0 +1,16 @@
+﻿@model List<EntityLayer.Concrete.Hizmetler>
+ @foreach(var x in Model)
+    {
+<div class="col-12 col-md-12 col-lg-4">
+    <div class="card text-white text-center bg-dark pd-2" style="height: 340px;">
+        <div class="card-body">
+            <i class="bi bi-gear-fill"></i>
+            <h3 key="14">@x.HizmetlerBaslik</h3>
+            <p key="18">
+                @x.HizmetlerAcıklama
+            </p>
+            <button key="13" class="btn btn-primary mb-3">Görüntüle</button>
+        </div>
+    </div>
+</div>
+}

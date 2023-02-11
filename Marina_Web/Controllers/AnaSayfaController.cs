@@ -8,5 +8,11 @@ namespace Marina_Web.Controllers
 		{
 			return View();
 		}
-	}
+
+
+        public IActionResult Hakkimda()
+        {
+            return View();
+        }
+    }
 }

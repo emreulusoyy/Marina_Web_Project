@@ -1,0 +1,22 @@
+﻿@model List<EntityLayer.Concrete.Galeri>
+<section id="gallery" class="gallery section-padding">
+    <div class="container">
+        <div class="section-header text-center pb-3">
+            <h3>GALERİ</h3>
+            <p>
+                Sektördeki son derece olumlu bilinirliğini, yüksek hizmet kalitesi,
+                müşteri odaklı çalışması,<br> servislerinin garantili olması, sürekli
+                kendini yenileyen ve eğitimlerini aksatmayan güler yüzlü personeli,
+                iş disiplini ve takım çalışması <br>sayesinde sürdürmektedir.
+            </p>
+        </div>
+        <div class="row row-cols-md-3 row-cols-sm-2 row-cols-1">
+            @foreach(var x in Model)
+            {       
+            <div class="col my-2">
+                <img src="@x.Image" class="gallery-item img-fluid p-2 bg-white border border-dark" alt="">
+            </div>
+            }
+        </div>
+    </div>
+</section>

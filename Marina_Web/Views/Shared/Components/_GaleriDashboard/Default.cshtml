@@ -1,0 +1,23 @@
+﻿@model List<EntityLayer.Concrete.Galeri>
+
+<div class="charts">
+    <div class="mid-content-top charts-grids">
+        <div class="middle-content">
+            <h4 class="title">Fotoğraflar</h4>
+            <!-- start content_slider -->
+            <div id="owl-demo" class="owl-carousel text-center">
+                @foreach(var x in Model)
+                {
+                    
+             
+                <div class="item">
+                    <img class="lazyOwl img-responsive" data-src="@x.Image" alt="name" style="height:280px;">
+                </div>
+                }
+
+            </div>
+        </div>
+        <!--//sreen-gallery-cursual---->
+    </div>
+</div>
+

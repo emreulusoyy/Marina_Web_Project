@@ -1,0 +1,52 @@
+﻿@model List<EntityLayer.Concrete.Iletisim>
+@{
+    ViewData["Title"] = "Index";
+    Layout = "~/Areas/Admin/Views/_AdminLayout.cshtml";
+}
+
+
+<div id="page-wrapper">
+	<div class="main-page">
+		<div class="tables">
+			<div class="panel-body widget-shadow">
+				@foreach (var x in Model)
+				{
+
+
+						<h4>İletişim Sayfası</h4>
+					<table class="table">
+						<thead>
+							<tr>
+								<th>#</th>
+								<th>İl</th>
+								<th>Açık Adres</th>
+								<th>Ofis Tel</th>
+								<th>Cep Tel</th>
+								<th>Mail Adresi</th>
+								<th>İnstagram Adresi</th>
+								<th>Facebook Adresi</th>
+								<th>Güncelle</th>
+							</tr>
+						</thead>
+						<tbody>
+							<tr>
+								<th scope="row">@x.IletisimID</th>
+								<td>@x.IlAdres</td>
+								<td>@x.AcıkAdres</td>
+								<td>@x.OfisNo</td>
+								<td>@x.GsmNo</td>
+								<td>@x.Email</td>
+								<td>@x.Instagram</td>
+								<td>@x.Facebook</td>
+									<td><a href="/Iletisim/IletisimDuzenle/@x.IletisimID" class="btn btn-success">Güncelle</a> </td>
+							</tr>
+
+						</tbody>
+					</table>
+				}
+			</div>
+
+		</div>
+	</div>
+</div>
+

@@ -194,7 +194,7 @@ namespace DataAccessLayer.Migrations
                         .HasColumnType("int")
                         .HasAnnotation("SqlServer:ValueGenerationStrategy", SqlServerValueGenerationStrategy.IdentityColumn);
 
-                    b.Property<string>("Adres")
+                    b.Property<string>("AcıkAdres")
                         .HasColumnType("nvarchar(max)");
 
                     b.Property<string>("Email")
@@ -203,10 +203,16 @@ namespace DataAccessLayer.Migrations
                     b.Property<string>("Facebook")
                         .HasColumnType("nvarchar(max)");
 
+                    b.Property<string>("GsmNo")
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<string>("IlAdres")
+                        .HasColumnType("nvarchar(max)");
+
                     b.Property<string>("Instagram")
                         .HasColumnType("nvarchar(max)");
 
-                    b.Property<string>("TelefonNo")
+                    b.Property<string>("OfisNo")
                         .HasColumnType("nvarchar(max)");
 
                     b.HasKey("IletisimID");

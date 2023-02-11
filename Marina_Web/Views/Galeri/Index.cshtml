@@ -1,0 +1,52 @@
+﻿@model List<EntityLayer.Concrete.Galeri>
+@{
+    ViewData["Title"] = "Index";
+    Layout = "~/Areas/Admin/Views/_AdminLayout.cshtml";
+}
+<div id="page-wrapper">
+    <div class="main-page">
+        <div class="elements">
+            <div class="panel-body widget-shadow"> 
+
+            <h4>Fotoğraflar Listesi</h4>
+            <br />
+                <a href="/Hakkimda/HakkimdaDuzenle/" class="btn btn-success">Fotoğraf Ekle</a>
+            </div>
+
+          
+
+            <div class="col-sm-12 w3-agileits-crd widgettable">
+                @foreach (var x in Model)
+                {
+                    <div class="col-md-4 chart-layer1-right" style="margin-top:15px;">
+
+                        <div class="user-marorm">
+                            <div class="maloru-top">
+                                <img src="@x.Image" style="height:250px; width:515px;">
+                            </div>
+                            <div class="malorm-bottom">
+                                <span class="malorm-pro"> </span>
+                                <h2>@x.Baslik</h2>
+                                <ul class="malorum-icons">
+                                    <li>
+                                        <a href="/Hakkimda/HakkimdaDuzenle/@x.GaleriID" class="btn btn-danger">Sil</a>
+                                    </li>
+                                    <li>
+                                        <a href="/Hakkimda/HakkimdaDuzenle/@x.GaleriID" class="btn btn-warning">Düzenle</a>
+                                    </li>
+                                    
+
+                                </ul>
+                            </div>
+                        </div>
+
+                    </div>
+
+                }
+                <div class="clearfix"></div>
+            </div>
+
+
+        </div>
+    </div>
+</div>

@@ -3,10 +3,11 @@
     ViewData["Title"] = "Index";
     Layout = "~/Areas/Admin/Views/_AdminLayout.cshtml";
 }
-
-<h1>Index</h1>
+<div>
 <div id="page-wrapper">
     <div class="main-page">
+           
+     <div class="elements">
 <div class="col_3">
     <div class="col-md-3 widget widget1">
         <div class="r3_counter_box">
@@ -56,5 +57,11 @@
     <div class="clearfix"> </div>
 </div>
 </div>
+<br />
+<br />
+    @await Component.InvokeAsync("_GaleriDashboard")
 </div>
+</div>
+</div>
+
 
